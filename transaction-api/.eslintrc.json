@@ -15,5 +15,8 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "class-methods-use-this": "off",
+        "import/extensions": "off",
+        "no-restricted-syntax": "off"
     }
 }
