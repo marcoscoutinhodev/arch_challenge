@@ -16,7 +16,7 @@ class EntryPoint {
 
       return res
         .status(400)
-        .json({ error: 'Error to add transaction' });
+        .json({ error: 'Insufficient balance for this transaction' });
     } catch (err: any) {
       return res
         .status(500)
