@@ -1,0 +1,9 @@
+{
+  "name": "transaction-api",
+  "version": "1.0.0",
+  "description": "API to add account transactions",
+  "main": "server/main/server.ts",
+  "author": "Marcos Vinicius Coutinho L",
+  "license": "MIT",
+  "private": true
+}
