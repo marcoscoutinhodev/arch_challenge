@@ -10,8 +10,8 @@ class EntryPoint {
       const accountBalance = await facade.exec(req.accountId);
 
       if (accountBalance) {
-        log(`Account Balance: ${accountBalance}\n`);
-        return res.status(200).json({ accountBalance });
+        log(`Account Balance: ${accountBalance.toFixed(2)}\n`);
+        return res.status(200).json({ accountBalance: accountBalance.toFixed(2) });
       }
 
       log('No transactions found for this account id\n');

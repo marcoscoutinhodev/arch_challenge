@@ -16,14 +16,14 @@ app.use(express.json());
 app.get('/:accountId?', entryPointValidationMiddleware, entryPoint.handle);
 
 mongoHelper.connect(env.mongoUri)
-  .then(() => {
+  .then(async () => {
     console.log('MongoDB connected');
 
-    redisHelper.redisClient
-      .connect()
-      .then(() => {
-        console.log('Redis connected');
+    await redisHelper.redisClient.connect();
+    console.log('Redis connected');
 
-        app.listen(env.port, () => console.log('balance-api is running..\n\n'));
-      });
+    await redisHelper.subscriber.connect();
+    console.log('Subscriber connected');
+
+    app.listen(env.port, () => console.log('balance-api is running..\n\n'));
   });

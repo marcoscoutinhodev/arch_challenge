@@ -2,6 +2,11 @@ import { log } from 'console';
 import reloadAccountBalance from '../helper/reload-account-balance';
 import redisHelper from '@/infra/redis-helper';
 import nodeCacheHelper from '@/infra/node-cache-helper';
+import updateNodeCacheOnRedisChange from './update-node-cache-on-redis-change';
+
+(async () => {
+  updateNodeCacheOnRedisChange();
+})();
 
 export default class Facade {
   async exec(accountId: number): Promise<number | null> {
