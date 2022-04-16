@@ -1,0 +1,9 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "API Gateway for Transaction API & Balance API",
+  "main": "src/main/server.js",
+  "author": "Marcos Vinicius Coutinho L",
+  "license": "MIT",
+  "private": true
+}
