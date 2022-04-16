@@ -5,9 +5,6 @@
     "rootDir": "./src",
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"],
-    },
     "outDir": "dist",
     "removeComments": true,
     "esModuleInterop": true,
