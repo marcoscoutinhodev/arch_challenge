@@ -10,6 +10,7 @@ import updateNodeCacheOnRedisChange from './update-node-cache-on-redis-change';
 
 export default class Facade {
   async exec(accountId: number): Promise<number | null> {
+    log(`AccountID: ${accountId}`);
     let accountBalance: string | null | undefined;
 
     accountBalance = nodeCacheHelper.getNodeCache(accountId.toString());
@@ -30,7 +31,7 @@ export default class Facade {
       return parseFloat(accountBalance);
     }
 
-    log('Reloading account balance...');
+    log('Looking up the account balance in the database...');
     const accountBalanceReloaded = await reloadAccountBalance(accountId);
 
     if (accountBalanceReloaded !== null) {

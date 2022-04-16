@@ -9,6 +9,6 @@ export default async () => {
       accountInfo.accountId,
       accountInfo.accountBalance,
     );
-    log(`New transaction detected on account ${accountInfo.accountId}, balance has been updated in node-cache\n`);
+    log(`New transaction detected on account ${accountInfo.accountId}, balance updated in node-cache\n`);
   });
 };

@@ -10,7 +10,7 @@ class EntryPoint {
       const accountBalance = await facade.exec(req.accountId);
 
       if (accountBalance) {
-        log(`Account Balance: ${accountBalance.toFixed(2)}\n`);
+        log(`Account balance: $${accountBalance.toFixed(2)}\n`);
         return res.status(200).json({ accountBalance: accountBalance.toFixed(2) });
       }
 
