@@ -1,0 +1,9 @@
+{
+  "name": "balance-api",
+  "version": "1.0.0",
+  "description": "API to check account balance",
+  "main": "src/server.ts",
+  "author": "Marcos Vinicius Coutinho L",
+  "license": "MIT",
+  "private": true
+}
