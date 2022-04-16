@@ -2,7 +2,7 @@ import { StateEngineUseCase } from '@/domain/interface/state-engine-use-case';
 import mongoHelper from '@/infra/mongo-helper';
 import reloadAccountBalance from '../helper/reload-account-balance';
 
-class StateEngine implements StateEngineUseCase {
+export default class StateEngine implements StateEngineUseCase {
   async exec(transactionData: StateEngineUseCase.TransactionData): Promise<boolean> {
     const {
       accountId, transactionType, transactionAmount, transactionDate,
@@ -26,5 +26,3 @@ class StateEngine implements StateEngineUseCase {
     return false;
   }
 }
-
-export default new StateEngine();
