@@ -10,6 +10,8 @@ export default class StateEngine implements StateEngineUseCase {
       accountId, transactionType, transactionAmount, transactionDate,
     } = transactionData;
 
+    log(`Transaction details: AccountID ${accountId}`);
+
     let accountBalance = await reloadAccountBalance(accountId);
 
     transactionType === 'cred' ? accountBalance -= transactionAmount : accountBalance += transactionAmount;
