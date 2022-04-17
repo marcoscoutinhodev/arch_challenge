@@ -20,11 +20,12 @@ yarn && yarn start
 ```
 
 As requisições devem ser feitas para 127.0.0.1:4000
- POST /transaction  ->  Dados que precisam ser enviados no corpo da requisição {
+ POST /transaction
+  - Dados que precisam ser enviados no corpo da requisição {
     "accountId": NUMBER,
     "transactionType": STRING ("deb" ou "cred")
     "transactionAmount": NUMBER,
     "transactionDate": STRING (precisa ser uma data valida)
-}
+  }
  
- GET /balance/<ACCOUNT-ID>
+ GET /balance/ACCOUNT-ID
