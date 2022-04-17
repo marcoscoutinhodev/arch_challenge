@@ -20,5 +20,11 @@ yarn && yarn start
 ```
 
 As requisições devem ser feitas para 127.0.0.1:4000
- POST /transaction >> Fazer transação
- GET /balance/<ACCOUNT-ID> >> Consultar saldo
+ POST /transaction  ->  Dados que precisam ser enviados no corpo da requisição {
+    "accountId": NUMBER,
+    "transactionType": STRING ("deb" ou "cred")
+    "transactionAmount": NUMBER,
+    "transactionDate": STRING (precisa ser uma data valida)
+}
+ 
+ GET /balance/<ACCOUNT-ID>
