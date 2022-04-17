@@ -17,4 +17,4 @@ app.use('/balance/:accountId?', httpProxy(env.balanceApiRoute, {
 }));
 
 // eslint-disable-next-line no-console
-app.listen(env.port, () => console.log('API Gateway running...'));
+app.listen(env.port, () => console.log(`API Gateway is running on port ${env.port}...`));
