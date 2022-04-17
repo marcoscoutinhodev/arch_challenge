@@ -16,7 +16,7 @@ export default {
       await this.connect(this.uri);
     }
 
-    return this.mongoClient!.db().collection('usersTransactions');
+    return this.mongoClient!.db().collection('transactions');
   },
   async getAllTransactionByAccountId(accountId: number): Promise<Document[]> {
     const transactionCollection = await this.getTransactionsCollection();
